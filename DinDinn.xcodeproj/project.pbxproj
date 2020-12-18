@@ -12,6 +12,8 @@
 		B3683317258D281000538209 /* CartItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3683315258D281000538209 /* CartItemTableViewCell.xib */; };
 		B368331C258D295300538209 /* CartTotalValueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368331A258D295300538209 /* CartTotalValueTableViewCell.swift */; };
 		B368331D258D295300538209 /* CartTotalValueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B368331B258D295300538209 /* CartTotalValueTableViewCell.xib */; };
+		B3683324258D321B00538209 /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3683323258D321B00538209 /* MenuService.swift */; };
+		B36B1736258D35610022502A /* wall.json in Resources */ = {isa = PBXBuildFile; fileRef = B36B1735258D35610022502A /* wall.json */; };
 		B391656C258D02C300A7FCD5 /* MenuItemSectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B391656B258D02C300A7FCD5 /* MenuItemSectionCollectionViewCell.swift */; };
 		B3FA3187258CCEF50068D684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA3186258CCEF50068D684 /* AppDelegate.swift */; };
 		B3FA3189258CCEF50068D684 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA3188258CCEF50068D684 /* SceneDelegate.swift */; };
@@ -53,6 +55,8 @@
 		B3683315258D281000538209 /* CartItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartItemTableViewCell.xib; sourceTree = "<group>"; };
 		B368331A258D295300538209 /* CartTotalValueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTotalValueTableViewCell.swift; sourceTree = "<group>"; };
 		B368331B258D295300538209 /* CartTotalValueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTotalValueTableViewCell.xib; sourceTree = "<group>"; };
+		B3683323258D321B00538209 /* MenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
+		B36B1735258D35610022502A /* wall.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wall.json; sourceTree = "<group>"; };
 		B391656B258D02C300A7FCD5 /* MenuItemSectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemSectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3FA3183258CCEF50068D684 /* DinDinn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinDinn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FA3186258CCEF50068D684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				B3FA31C0258CDFE20068D684 /* Main.storyboard */,
 				B3FA3191258CCEF60068D684 /* LaunchScreen.storyboard */,
 				B3FA3194258CCEF60068D684 /* Info.plist */,
+				B36B1735258D35610022502A /* wall.json */,
 			);
 			path = DinDinn;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 				B3FA31EF258CF6DA0068D684 /* Cells */,
 				B3FA31B8258CDBDA0068D684 /* MenuViewController.swift */,
 				B3FA31B2258CDAEE0068D684 /* MenuItem.swift */,
+				B3683323258D321B00538209 /* MenuService.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 				B3FA31AA258CD6D70068D684 /* MenuItemTableViewCell.xib in Resources */,
 				B3683317258D281000538209 /* CartItemTableViewCell.xib in Resources */,
 				B3FA3190258CCEF60068D684 /* Assets.xcassets in Resources */,
+				B36B1736258D35610022502A /* wall.json in Resources */,
 				B3FA31C2258CDFE20068D684 /* Main.storyboard in Resources */,
 				B3FA31D3258CE1490068D684 /* sushi1.jpeg in Resources */,
 				B3FA31DB258CE1490068D684 /* pizza1.jpeg in Resources */,
@@ -375,6 +382,7 @@
 				B3FA31B3258CDAEE0068D684 /* MenuItem.swift in Sources */,
 				B3FA31B0258CDA310068D684 /* ObjectAssociation.swift in Sources */,
 				B3683311258D27DA00538209 /* CartViewController.swift in Sources */,
+				B3683324258D321B00538209 /* MenuService.swift in Sources */,
 				B3FA31A9258CD6D70068D684 /* MenuItemTableViewCell.swift in Sources */,
 				B3FA31E9258CF1CD0068D684 /* MenuDiscountsTableViewCell.swift in Sources */,
 				B391656C258D02C300A7FCD5 /* MenuItemSectionCollectionViewCell.swift in Sources */,

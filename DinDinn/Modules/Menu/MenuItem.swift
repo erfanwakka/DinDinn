@@ -7,6 +7,14 @@
 
 import Foundation
 
+struct Wall: Decodable {
+    let discountsURLs: [String]
+    let sections: MenuSection
+}
+struct MenuSection: Decodable {
+    let name: String
+    let items: [MenuItem]
+}
 struct MenuItem: Decodable {
     let name: String
     let ingridients: String

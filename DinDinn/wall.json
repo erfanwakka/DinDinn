@@ -1,0 +1,88 @@
+{
+  "discountsURLs": [
+    "pizza1",
+    "pizza2",
+    "pizza3",
+    "pizza4"
+  ],
+  "sections": [
+    {
+      "name": "Pizza",
+      "items": [
+        {
+          "title": "Pepperoni",
+          "price": "34 usd",
+          "info": "65 cm",
+          "imageURL": "pizza1",
+          "ingridients": "Some special Ingridients"
+        },
+        {
+          "title": "Steak",
+          "price": "34 usd",
+          "info": "80 cm",
+          "imageURL": "pizza2",
+          "ingridients": "Some special Ingridients"
+        },
+        {
+          "title": "Chicken Pizza",
+          "price": "34 usd",
+          "info": "40 cm",
+          "imageURL": "pizza3",
+          "ingridients": "Some special Ingridients"
+        }
+      ]
+    },
+    {
+      "name": "Sushi",
+      "items": [
+        {
+          "title": "Temaki",
+          "price": "17 usd",
+          "info": "29 gram",
+          "imageURL": "sushi1",
+          "ingridients": "Some special Ingridients"
+        },
+        {
+          "title": "Gunkan",
+          "price": "22 usd",
+          "info": "123 gram",
+          "imageURL": "sushi2",
+          "ingridients": "Some special Ingridients"
+        },
+        {
+          "title": "Nigiri",
+          "price": "12 usd",
+          "info": "188 gram",
+          "imageURL": "sushi3",
+          "ingridients": "Some special Ingridients"
+        }
+      ]
+    },
+    {
+      "name": "Drinks",
+      "items": [
+        {
+          "title": "Beer",
+          "price": "4 usd",
+          "info": "140 ml",
+          "imageURL": "drink1",
+          "ingridients": "Some special Ingridients"
+        },
+        {
+          "title": "Coke",
+          "price": "2 usd",
+          "info": "120 ml",
+          "imageURL": "drink2",
+          "ingridients": "Some special Ingridients"
+        },
+        {
+          "title": "Pepsi",
+          "price": "2 usd",
+          "info": "99 ml",
+          "imageURL": "drink3",
+          "ingridients": "Some special Ingridients"
+        }
+      ]
+    }
+  ]
+}
