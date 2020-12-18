@@ -13,9 +13,12 @@
 		B3FA318E258CCEF50068D684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3FA318C258CCEF50068D684 /* Main.storyboard */; };
 		B3FA3190258CCEF60068D684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FA318F258CCEF60068D684 /* Assets.xcassets */; };
 		B3FA3193258CCEF60068D684 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3FA3191258CCEF60068D684 /* LaunchScreen.storyboard */; };
+		FF5D4F87759A51A58C163D63 /* Pods_DinDinn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1373A0455A9468B339181AC /* Pods_DinDinn.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		411282B7673E9646BF2CCA1F /* Pods-DinDinn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDinn.release.xcconfig"; path = "Target Support Files/Pods-DinDinn/Pods-DinDinn.release.xcconfig"; sourceTree = "<group>"; };
+		A735BCDF36EC62C136F42753 /* Pods-DinDinn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinDinn.debug.xcconfig"; path = "Target Support Files/Pods-DinDinn/Pods-DinDinn.debug.xcconfig"; sourceTree = "<group>"; };
 		B3FA3183258CCEF50068D684 /* DinDinn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinDinn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FA3186258CCEF50068D684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3FA3188258CCEF50068D684 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		B3FA318F258CCEF60068D684 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3FA3192258CCEF60068D684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B3FA3194258CCEF60068D684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1373A0455A9468B339181AC /* Pods_DinDinn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DinDinn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF5D4F87759A51A58C163D63 /* Pods_DinDinn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		053FBD1577F35FE78E04A3B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A735BCDF36EC62C136F42753 /* Pods-DinDinn.debug.xcconfig */,
+				411282B7673E9646BF2CCA1F /* Pods-DinDinn.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		0BBE7A57DE6075397678B235 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1373A0455A9468B339181AC /* Pods_DinDinn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B3FA317A258CCEF50068D684 = {
 			isa = PBXGroup;
 			children = (
 				B3FA3185258CCEF50068D684 /* DinDinn */,
 				B3FA3184258CCEF50068D684 /* Products */,
+				053FBD1577F35FE78E04A3B2 /* Pods */,
+				0BBE7A57DE6075397678B235 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3FA3197258CCEF60068D684 /* Build configuration list for PBXNativeTarget "DinDinn" */;
 			buildPhases = (
+				C95939EA5365631AEC689732 /* [CP] Check Pods Manifest.lock */,
 				B3FA317F258CCEF50068D684 /* Sources */,
 				B3FA3180258CCEF50068D684 /* Frameworks */,
 				B3FA3181258CCEF50068D684 /* Resources */,
+				68C6FF3FC64BAC1BA00ECE1D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68C6FF3FC64BAC1BA00ECE1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DinDinn/Pods-DinDinn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DinDinn/Pods-DinDinn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DinDinn/Pods-DinDinn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C95939EA5365631AEC689732 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DinDinn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B3FA317F258CCEF50068D684 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		B3FA3198258CCEF60068D684 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A735BCDF36EC62C136F42753 /* Pods-DinDinn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		B3FA3199258CCEF60068D684 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 411282B7673E9646BF2CCA1F /* Pods-DinDinn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
