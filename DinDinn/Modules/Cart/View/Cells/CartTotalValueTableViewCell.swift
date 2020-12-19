@@ -9,16 +9,21 @@ import UIKit
 
 class CartTotalValueTableViewCell: UITableViewCell {
 
+    //MARK: IBOutlets
     @IBOutlet weak var totalPriceLabel: UILabel!
+    
+    
+    //MARK: Vars
+    
+    //MARK: Overrides
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
+    //MARK: Functions
+    func setData(totalPrice: Double) {
+        self.totalPriceLabel.text = "total: \(totalPrice)"
+    }
+
 }

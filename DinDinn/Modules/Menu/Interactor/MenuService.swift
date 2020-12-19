@@ -11,9 +11,6 @@ import Moya
 enum MenuService {
     case wall
 }
-let endpointClosure = { (target: MenuService) -> Endpoint in
-    return Endpoint(url: URL(target: target).absoluteString, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, task: target.task, httpHeaderFields: target.headers)
-}
 extension MenuService: TargetType {
     var baseURL: URL {
         return URL(string: "/")!

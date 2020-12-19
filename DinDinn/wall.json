@@ -10,22 +10,25 @@
       "name": "Pizza",
       "items": [
         {
+          "id": 1,
           "title": "Pepperoni",
-          "price": "34 usd",
+          "price": 34,
           "info": "65 cm",
           "imageURL": "pizza1",
           "ingridients": "Some special Ingridients"
         },
         {
+          "id": 2,
           "title": "Steak",
-          "price": "34 usd",
+          "price": 12,
           "info": "80 cm",
           "imageURL": "pizza2",
           "ingridients": "Some special Ingridients"
         },
         {
+          "id": 3,
           "title": "Chicken Pizza",
-          "price": "34 usd",
+          "price": 13,
           "info": "40 cm",
           "imageURL": "pizza3",
           "ingridients": "Some special Ingridients"
@@ -36,22 +39,25 @@
       "name": "Sushi",
       "items": [
         {
+          "id": 4,
           "title": "Temaki",
-          "price": "17 usd",
+          "price": 17,
           "info": "29 gram",
           "imageURL": "sushi1",
           "ingridients": "Some special Ingridients"
         },
         {
+          "id": 5,
           "title": "Gunkan",
-          "price": "22 usd",
+          "price": 22,
           "info": "123 gram",
           "imageURL": "sushi2",
           "ingridients": "Some special Ingridients"
         },
         {
+          "id": 6,
           "title": "Nigiri",
-          "price": "12 usd",
+          "price": 12,
           "info": "188 gram",
           "imageURL": "sushi3",
           "ingridients": "Some special Ingridients"
@@ -62,22 +68,25 @@
       "name": "Drinks",
       "items": [
         {
+          "id": 7,
           "title": "Beer",
-          "price": "4 usd",
+          "price": 4,
           "info": "140 ml",
           "imageURL": "drink1",
           "ingridients": "Some special Ingridients"
         },
         {
+          "id": 8,
           "title": "Coke",
-          "price": "2 usd",
+          "price": 2,
           "info": "120 ml",
           "imageURL": "drink2",
           "ingridients": "Some special Ingridients"
         },
         {
+          "id": 9,
           "title": "Pepsi",
-          "price": "2 usd",
+          "price": 2,
           "info": "99 ml",
           "imageURL": "drink3",
           "ingridients": "Some special Ingridients"
