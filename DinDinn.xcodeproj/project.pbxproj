@@ -39,18 +39,6 @@
 		B3FA31B9258CDBDA0068D684 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA31B8258CDBDA0068D684 /* MenuViewController.swift */; };
 		B3FA31BC258CDC790068D684 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA31BB258CDC790068D684 /* UIView+Constraints.swift */; };
 		B3FA31C2258CDFE20068D684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3FA31C0258CDFE20068D684 /* Main.storyboard */; };
-		B3FA31D1258CE1490068D684 /* pizza2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3FA31C5258CE1490068D684 /* pizza2.jpeg */; };
-		B3FA31D2258CE1490068D684 /* sushi4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3FA31C6258CE1490068D684 /* sushi4.jpg */; };
-		B3FA31D3258CE1490068D684 /* sushi1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3FA31C7258CE1490068D684 /* sushi1.jpeg */; };
-		B3FA31D4258CE1490068D684 /* pizza3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3FA31C8258CE1490068D684 /* pizza3.jpeg */; };
-		B3FA31D5258CE1490068D684 /* burger1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3FA31C9258CE1490068D684 /* burger1.jpeg */; };
-		B3FA31D6258CE1490068D684 /* pizza4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3FA31CA258CE1490068D684 /* pizza4.jpeg */; };
-		B3FA31D7258CE1490068D684 /* burger3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3FA31CB258CE1490068D684 /* burger3.jpeg */; };
-		B3FA31D8258CE1490068D684 /* burger2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3FA31CC258CE1490068D684 /* burger2.jpeg */; };
-		B3FA31D9258CE1490068D684 /* sushi2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3FA31CD258CE1490068D684 /* sushi2.jpeg */; };
-		B3FA31DA258CE1490068D684 /* burger4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3FA31CE258CE1490068D684 /* burger4.jpeg */; };
-		B3FA31DB258CE1490068D684 /* pizza1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3FA31CF258CE1490068D684 /* pizza1.jpeg */; };
-		B3FA31DC258CE1490068D684 /* sushi3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B3FA31D0258CE1490068D684 /* sushi3.jpeg */; };
 		B3FA31DF258CE20A0068D684 /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA31DE258CE20A0068D684 /* UIView+Layout.swift */; };
 		B3FA31E9258CF1CD0068D684 /* MenuDiscountsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FA31E7258CF1CD0068D684 /* MenuDiscountsTableViewCell.swift */; };
 		B3FA31EA258CF1CD0068D684 /* MenuDiscountsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3FA31E8258CF1CD0068D684 /* MenuDiscountsTableViewCell.xib */; };
@@ -95,18 +83,6 @@
 		B3FA31B8258CDBDA0068D684 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B3FA31BB258CDC790068D684 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		B3FA31C1258CDFE20068D684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B3FA31C5258CE1490068D684 /* pizza2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pizza2.jpeg; sourceTree = "<group>"; };
-		B3FA31C6258CE1490068D684 /* sushi4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sushi4.jpg; sourceTree = "<group>"; };
-		B3FA31C7258CE1490068D684 /* sushi1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sushi1.jpeg; sourceTree = "<group>"; };
-		B3FA31C8258CE1490068D684 /* pizza3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pizza3.jpeg; sourceTree = "<group>"; };
-		B3FA31C9258CE1490068D684 /* burger1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burger1.jpeg; sourceTree = "<group>"; };
-		B3FA31CA258CE1490068D684 /* pizza4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pizza4.jpeg; sourceTree = "<group>"; };
-		B3FA31CB258CE1490068D684 /* burger3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burger3.jpeg; sourceTree = "<group>"; };
-		B3FA31CC258CE1490068D684 /* burger2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burger2.jpeg; sourceTree = "<group>"; };
-		B3FA31CD258CE1490068D684 /* sushi2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sushi2.jpeg; sourceTree = "<group>"; };
-		B3FA31CE258CE1490068D684 /* burger4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = burger4.jpeg; sourceTree = "<group>"; };
-		B3FA31CF258CE1490068D684 /* pizza1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pizza1.jpeg; sourceTree = "<group>"; };
-		B3FA31D0258CE1490068D684 /* sushi3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sushi3.jpeg; sourceTree = "<group>"; };
 		B3FA31DE258CE20A0068D684 /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		B3FA31E7258CF1CD0068D684 /* MenuDiscountsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDiscountsTableViewCell.swift; sourceTree = "<group>"; };
 		B3FA31E8258CF1CD0068D684 /* MenuDiscountsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuDiscountsTableViewCell.xib; sourceTree = "<group>"; };
@@ -297,25 +273,6 @@
 			path = DinDinn;
 			sourceTree = "<group>";
 		};
-		B3FA31C4258CE1490068D684 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				B3FA31C5258CE1490068D684 /* pizza2.jpeg */,
-				B3FA31C6258CE1490068D684 /* sushi4.jpg */,
-				B3FA31C7258CE1490068D684 /* sushi1.jpeg */,
-				B3FA31C8258CE1490068D684 /* pizza3.jpeg */,
-				B3FA31C9258CE1490068D684 /* burger1.jpeg */,
-				B3FA31CA258CE1490068D684 /* pizza4.jpeg */,
-				B3FA31CB258CE1490068D684 /* burger3.jpeg */,
-				B3FA31CC258CE1490068D684 /* burger2.jpeg */,
-				B3FA31CD258CE1490068D684 /* sushi2.jpeg */,
-				B3FA31CE258CE1490068D684 /* burger4.jpeg */,
-				B3FA31CF258CE1490068D684 /* pizza1.jpeg */,
-				B3FA31D0258CE1490068D684 /* sushi3.jpeg */,
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
 		B3FA31EF258CF6DA0068D684 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,7 +316,6 @@
 				B3FA3188258CCEF50068D684 /* SceneDelegate.swift */,
 				B3FA3191258CCEF60068D684 /* LaunchScreen.storyboard */,
 				B3FA318F258CCEF60068D684 /* Assets.xcassets */,
-				B3FA31C4258CE1490068D684 /* images */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -369,10 +325,10 @@
 			children = (
 				B348F573258E6F3E00463B4B /* View */,
 				B348F576258E6F6400463B4B /* Interactor */,
-				B348F575258E6F5F00463B4B /* Protocols */,
+				B348F574258E6F4100463B4B /* Presenter */,
 				B348F584258E6F9600463B4B /* Entity */,
 				B348F577258E6F6B00463B4B /* Router */,
-				B348F574258E6F4100463B4B /* Presenter */,
+				B348F575258E6F5F00463B4B /* Protocols */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -436,26 +392,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3FA31D7258CE1490068D684 /* burger3.jpeg in Resources */,
-				B3FA31D9258CE1490068D684 /* sushi2.jpeg in Resources */,
 				B3FA31EA258CF1CD0068D684 /* MenuDiscountsTableViewCell.xib in Resources */,
-				B3FA31D4258CE1490068D684 /* pizza3.jpeg in Resources */,
-				B3FA31D6258CE1490068D684 /* pizza4.jpeg in Resources */,
 				B368331D258D295300538209 /* CartTotalValueTableViewCell.xib in Resources */,
-				B3FA31D1258CE1490068D684 /* pizza2.jpeg in Resources */,
 				B3FA3193258CCEF60068D684 /* LaunchScreen.storyboard in Resources */,
-				B3FA31D8258CE1490068D684 /* burger2.jpeg in Resources */,
-				B3FA31DA258CE1490068D684 /* burger4.jpeg in Resources */,
 				B3FA31AA258CD6D70068D684 /* MenuItemTableViewCell.xib in Resources */,
 				B3683317258D281000538209 /* CartItemTableViewCell.xib in Resources */,
 				B3FA3190258CCEF60068D684 /* Assets.xcassets in Resources */,
 				B36B1736258D35610022502A /* wall.json in Resources */,
 				B3FA31C2258CDFE20068D684 /* Main.storyboard in Resources */,
-				B3FA31D3258CE1490068D684 /* sushi1.jpeg in Resources */,
-				B3FA31DB258CE1490068D684 /* pizza1.jpeg in Resources */,
-				B3FA31D2258CE1490068D684 /* sushi4.jpg in Resources */,
-				B3FA31DC258CE1490068D684 /* sushi3.jpeg in Resources */,
-				B3FA31D5258CE1490068D684 /* burger1.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

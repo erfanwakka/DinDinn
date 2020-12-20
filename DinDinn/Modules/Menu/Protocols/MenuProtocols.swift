@@ -24,6 +24,7 @@ protocol MenuPresentorToInteractorProtocol: class {
     var wall: Wall? { get }
     
     func fetchWall()
+    func addToCart(menuItem: MenuItem)
 }
 
 protocol MenuViewToPresenterProtocol: class {
@@ -32,9 +33,11 @@ protocol MenuViewToPresenterProtocol: class {
     var router: MenuPresenterToRouterProtocol? { get set }
     
     func updateView()
-//    func getDiscount
-    func getItemsCount(forSection section: String) -> Int
-    func getItem(forSection section: String, index: Int) -> MenuItem?
+    func getDiscountUrls() -> [String]
+    func getSections() -> [String]
+    func getItemsCount(forSectionIndex sectionIndex: Int) -> Int
+    func getItem(forSectionIndex sectionIndex: Int, index: Int) -> MenuItem?
+    func addToCart(menuItem: MenuItem)
 }
 
 protocol MenuPresenterToRouterProtocol: class {

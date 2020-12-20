@@ -36,6 +36,7 @@ protocol CartViewToPresenterProtocol: class {
     func getItem(index: Int) -> MenuItem?
     func getTotalValue() -> Double
     func removeMenuItem(menuItem: MenuItem)
+    func getIndex(_ menuItem: MenuItem) -> Int?
 }
 
 protocol CartPresenterToRouterProtocol: class {

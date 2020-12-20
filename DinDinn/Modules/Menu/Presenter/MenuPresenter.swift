@@ -22,25 +22,38 @@ class MenuPresenter {
 }
 extension MenuPresenter: MenuViewToPresenterProtocol {
     func updateView() {
-        
+        interactor?.fetchWall()
     }
     
-    func getItemsCount(forSection section: String) -> Int {
-        
+    func getItemsCount(forSectionIndex sectionIndex: Int) -> Int {
+        return interactor?.wall?.sections[sectionIndex].items.count ?? 0
     }
     
-    func getItem(forSection section: String, index: Int) -> MenuItem? {
-        
+    func getItem(forSectionIndex sectionIndex: Int, index: Int) -> MenuItem? {
+        return interactor?.wall?.sections[sectionIndex].items[index]
+    }
+    func getDiscountUrls() -> [String] {
+        return interactor?.wall?.discountsURLs ?? []
+    }
+    func getSections() -> [String] {
+        var sections = [String]()
+        for section in interactor?.wall?.sections ?? [] {
+            sections.append(section.name)
+        }
+        return sections
+    }
+    func addToCart(menuItem: MenuItem) {
+        interactor?.addToCart(menuItem: menuItem)
     }
     
 }
 extension MenuPresenter: MenuInteractorToPresenterProtocol {
     func wallFetched() {
-        
+        view?.showWall()
     }
     
     func wallFetchedWithError(error: Error) {
-        
+        view?.showError()
     }
     
 }

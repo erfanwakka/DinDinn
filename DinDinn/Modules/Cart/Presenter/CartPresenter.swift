@@ -26,6 +26,10 @@ extension CartPresenter: CartViewToPresenterProtocol {
     }
     
     func getItem(index: Int) -> MenuItem? {
+        if index >= interactor?.items.count ?? 0 {
+            return nil
+            
+        }
         return interactor?.items[index]
     }
     
@@ -38,6 +42,9 @@ extension CartPresenter: CartViewToPresenterProtocol {
     }
     func removeMenuItem(menuItem: MenuItem) {
         interactor?.removeMenuItem(menuItem: menuItem)
+    }
+    func getIndex(_ menuItem: MenuItem) -> Int? {
+        return interactor?.items.firstIndex(of: menuItem) ?? 0
     }
 }
 extension CartPresenter: CartInteractorToPresenterProtocol {

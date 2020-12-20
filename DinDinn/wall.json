@@ -1,9 +1,8 @@
 {
   "discountsURLs": [
-    "pizza1",
-    "pizza2",
-    "pizza3",
-    "pizza4"
+    "banner1",
+    "banner2",
+    "banner3"
   ],
   "sections": [
     {
@@ -65,30 +64,30 @@
       ]
     },
     {
-      "name": "Drinks",
+      "name": "Burgers",
       "items": [
         {
           "id": 7,
-          "title": "Beer",
+          "title": "Big Mac",
           "price": 4,
-          "info": "140 ml",
-          "imageURL": "drink1",
+          "info": "140 gram",
+          "imageURL": "burger1",
           "ingridients": "Some special Ingridients"
         },
         {
           "id": 8,
-          "title": "Coke",
+          "title": "Double Cheese",
           "price": 2,
-          "info": "120 ml",
-          "imageURL": "drink2",
+          "info": "120 gram",
+          "imageURL": "burger2",
           "ingridients": "Some special Ingridients"
         },
         {
           "id": 9,
-          "title": "Pepsi",
+          "title": "Burger with fries",
           "price": 2,
-          "info": "99 ml",
-          "imageURL": "drink3",
+          "info": "99 gram",
+          "imageURL": "burger3",
           "ingridients": "Some special Ingridients"
         }
       ]

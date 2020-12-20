@@ -11,7 +11,9 @@ class CartInteractor {
     
     //MARK: Vars
     var presenter: CartInteractorToPresenterProtocol?
-    var items: [MenuItem] = UserCart.shared.items
+    var items: [MenuItem] {
+        UserCart.shared.items
+    }
     var totalValue: Double {
         return items.map({$0.price}).reduce(0, {
             $0 + $1
@@ -25,7 +27,6 @@ class CartInteractor {
 extension CartInteractor: CartPresentorToInteractorProtocol {
     
     func fetchUserItems() {
-        items = UserCart.shared.items
         presenter?.userCartFetched()
     }
     func removeMenuItem(menuItem: MenuItem) {

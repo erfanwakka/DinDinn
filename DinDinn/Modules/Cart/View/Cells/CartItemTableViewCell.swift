@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RxSwift
 
 protocol CartItemTableViewCellDelegate: class {
     func removeMenuItem(menuItem: MenuItem)
@@ -19,30 +18,27 @@ class CartItemTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var itemImageView: UIImageView!
     
+    @IBAction func didTapCloseButton(_ sender: UIButton) {
+        if let menuItem = menuItem {
+            self.delegate?.removeMenuItem(menuItem: menuItem)
+        }
+    }
     //MARK: Vars
-    private var menuItem = PublishSubject<MenuItem>()
-    private var disposeBag = DisposeBag()
+    private var menuItem: MenuItem?
     private weak var delegate: CartItemTableViewCellDelegate?
     
     //MARK: Overrides
     override  func awakeFromNib() {
         super.awakeFromNib()
-        menuItem.subscribe(onNext: { [weak self] (item) in
-            guard let self = self else { return }
-            self.titleLabel.text = item.title
-            self.priceLabel.text = "\(item.price) usd"
-            //TODO: - image -
-            self.closeButton.rx.tap.subscribe(onNext: {
-                self.delegate?.removeMenuItem(menuItem: item)
-            }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: self.disposeBag)
-        }, onError: nil, onCompleted: nil, onDisposed: nil)
-        .disposed(by: disposeBag)
     }
     
     //MARK: Functions
     func setData(menuItem: MenuItem, delegate: CartItemTableViewCellDelegate?) {
         self.delegate = delegate
-        self.menuItem.onNext(menuItem)
+        self.menuItem = menuItem
+        self.titleLabel.text = menuItem.title
+        self.priceLabel.text = "\(menuItem.price) usd"
+        self.itemImageView?.image = UIImage(named: menuItem.imageURL)
     }
 
 

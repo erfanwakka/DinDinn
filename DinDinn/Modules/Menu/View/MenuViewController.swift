@@ -10,40 +10,24 @@ import RxSwift
 import RxCocoa
 
 class MenuViewController: UIViewController {
-
+    
     //MARK: Vars
     var presenter: MenuViewToPresenterProtocol?
     private let shopButton = UIButton()
     private let tableView = UITableView()
-    private var menuItems = PublishSubject<[MenuItem]>()
-    private var discountsUrls = PublishSubject<[String]>()
     private let disposeBag = DisposeBag()
+    private var selectedIndex = 0
+    private let numberOfSections = 2
+    
     //MARK: Overrides
     
     //MARK: Functions
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        
-        wall.subscribe { [weak self] (event) in
-            guard let self = self else { return }
-            switch event {
-            case .next(let wall):
-                self.discountsUrls.onNext(wall.discountsURLs)
-                if let section = wall.sections.first {
-                    self.menuItems.onNext(section.items)
-                }
-            case .error(let error):
-                print(error.localizedDescription)
-            case .completed:
-                break
-            }
-        }.disposed(by: disposeBag)
-        menuItems.bind(to: tableView.rx.items(cellIdentifier: "MenuItemTableViewCell", cellType: MenuItemTableViewCell.self)) { row, item, cell in
-            cell.setData(menuItem: item)
-        }.disposed(by: disposeBag)
+        presenter?.updateView()
     }
 }
 //MARK: - CodeView -
@@ -57,59 +41,89 @@ extension MenuViewController: CodeView {
         
         tableView.pinEdgesToSuperview()
         
-        shopButton.pinSafeRight()
-        shopButton.pinSafeBottom()
+        shopButton.pinRight(20)
+        shopButton.pinSafeBottom(20)
         shopButton.width(with: 50)
         shopButton.squareViewConstraint()
+        shopButton.cornerRadius = 25
     }
-    @objc func didSwipe() {
+    @objc func didSwipe(swipe: UISwipeGestureRecognizer) {
+        var index = selectedIndex
+        if swipe.direction == .right {
+            index -= 1
+            if index < 0 { index = 0 }
+        } else if swipe.direction == .left {
+            index += 1
+            if index >= presenter?.getSections().count ?? 0 {
+                index = (presenter?.getSections().count ?? 1) - 1
+            }
+        } else {
+            return
+        }
+        selectedIndex = index
         tableView.reloadSections(.init(arrayLiteral: 1), with: .automatic)
+        if let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? MenuDiscountsTableViewCell {
+            cell.refreshSections(selectedIndex: selectedIndex)
+        }
     }
     func setupAdditionalConfiguration() {
-        shopButton.setImage(#imageLiteral(resourceName: "card"), for: .normal)
+        view.backgroundColor = .white
+        tableView.backgroundColor = .white
+        shopButton.setImage(#imageLiteral(resourceName: "cart"), for: .normal)
+        shopButton.borderColor = .gray
+        shopButton.borderWidth = 1
         shopButton.rx.tap.subscribe(onNext: {
             let vc = CartRouter.createModule()
             UIApplication.showOnTopViewController(vc)
         }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
-        let swipe = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe))
-        swipe.direction = [.left, .right]
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe(swipe:)))
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe(swipe:)))
+        
+        swipeLeft.direction = .left
+        swipeRight.direction = .right
+        
+        tableView.addGestureRecognizer(swipeLeft)
+        tableView.addGestureRecognizer(swipeRight)
         
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
         tableView.rx.setDataSource(self).disposed(by: disposeBag)
-        tableView.addGestureRecognizer(swipe)
         tableView.contentInsetAdjustmentBehavior = .never
         tableView.separatorStyle = .none
-        tableView.register(UINib(nibName: "MenuItemTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuItemTableViewCell")
-        tableView.register(UINib(nibName: "MenuDiscountsTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuDiscountsTableViewCell")
+        tableView.register(UINib(nibName: MenuItemTableViewCell.name, bundle: nil), forCellReuseIdentifier: MenuItemTableViewCell.name)
+        tableView.register(UINib(nibName: MenuDiscountsTableViewCell.name, bundle: nil), forCellReuseIdentifier: MenuDiscountsTableViewCell.name)
     }
 }
 //MARK: - tableView delegate -
 extension MenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 { return 400 }
+        if indexPath.section == 0 { return UIScreen.main.bounds.height * 2 / 3 }
         return UITableView.automaticDimension
     }
 }
 //MARK: - tableView dataSource -
 extension MenuViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        if section == 0 {
+            return 1
+        } else {
+            return presenter?.getItemsCount(forSectionIndex: selectedIndex) ?? 0
+        }
     }
     
-    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return numberOfSections
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let c = tableView.dequeueReusableCell(withIdentifier: "MenuDiscountsTableViewCell", for: indexPath) as! MenuDiscountsTableViewCell
-            c.selectionStyle = .none
-            return c
+            let cell = tableView.dequeueReusableCell(withIdentifier: MenuDiscountsTableViewCell.name, for: indexPath) as! MenuDiscountsTableViewCell
+            cell.selectionStyle = .none
+            cell.setData(items: presenter?.getSections() ?? [], urls: presenter?.getDiscountUrls() ?? [], delegate: self, selectedIndex: selectedIndex)
+            return cell
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuItemTableViewCell", for: indexPath) as! MenuItemTableViewCell
-//        if let item = selectedSection?.items[indexPath.row] {
-//            cell.setData(menuItem: item)
-//        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: MenuItemTableViewCell.name, for: indexPath) as! MenuItemTableViewCell
+        if let item = presenter?.getItem(forSectionIndex: selectedIndex, index: indexPath.row) {
+            cell.setData(menuItem: item, delegate: self)
+        }
         cell.selectionStyle = .none
         return cell
     }
@@ -122,4 +136,15 @@ extension MenuViewController: MenuPresenterToViewProtocol {
         //TODO: - show error -
     }
     
+}
+extension MenuViewController: MenuDiscountsTableViewCellDelegate {
+    func didChangeSection(withIndex index: Int) {
+        selectedIndex = index
+        tableView.reloadSections(.init(arrayLiteral: 1), with: .automatic)
+    }
+}
+extension MenuViewController: MenuItemTableViewCellDeelgate {
+    func didBuyItem(_ menuItem: MenuItem) {
+        presenter?.addToCart(menuItem: menuItem)
+    }
 }

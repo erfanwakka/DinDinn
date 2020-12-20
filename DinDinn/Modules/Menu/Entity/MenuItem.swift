@@ -17,7 +17,7 @@ struct MenuSection: Decodable {
     let items: [MenuItem]
 }
 struct MenuItem: Decodable {
-    let id: String
+    let id: Int
     let title: String
     let ingridients: String
     let imageURL: String

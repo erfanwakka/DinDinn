@@ -13,6 +13,7 @@ class MenuDiscountCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        imageView.contentMode = .scaleAspectFit
         setupView()
     }
 }

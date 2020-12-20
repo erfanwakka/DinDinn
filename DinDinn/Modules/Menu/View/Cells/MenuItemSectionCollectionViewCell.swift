@@ -9,19 +9,23 @@ import UIKit
 
 class MenuItemSectionCollectionViewCell: UICollectionViewCell {
     
-    let button = UIButton()
+    let label = UILabel()
     
+    func setData(title: String, isSelected: Bool = false) {
+        label.text = title
+        label.textColor = isSelected ? .black : .gray
+    }
 }
 //MARK: - CodeView -
 extension MenuItemSectionCollectionViewCell: CodeView {
     func buildViewHierarchy() {
-        addSubview(button)
+        addSubview(label)
     }
     func setupConstraints() {
-        button.pinEdgesToSuperview()
+        label.pinEdgesToSuperview()
     }
     func setupAdditionalConfiguration() {
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .bold)
-        button.setTitleColor(.black, for: .normal)
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 25, weight: .bold)
     }
 }

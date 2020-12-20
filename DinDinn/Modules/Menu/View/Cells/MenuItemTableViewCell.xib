@@ -24,7 +24,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vfk-Mt-Oj5">
                                 <rect key="frame" x="0.0" y="0.0" width="256" height="356"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger1.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="fYO-Xx-Y3g">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fYO-Xx-Y3g">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="213.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="obT-s6-M71">
@@ -60,6 +60,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="1gk-fO-FSe"/>
                                                     <constraint firstAttribute="width" constant="90" id="kGQ-yg-vwA"/>
                                                 </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="55 USD">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -68,6 +69,9 @@
                                                         <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapPriceButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="65y-4d-4aT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -122,7 +126,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="burger1.jpeg" width="286" height="176"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

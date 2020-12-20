@@ -41,7 +41,9 @@ extension MenuInteractor: MenuPresentorToInteractorProtocol {
             }
         }.disposed(by: disposeBag)
     }
-    
+    func addToCart(menuItem: MenuItem) {
+        UserCart.shared.addToUserCart(menuItem: menuItem)
+    }
     
     
 }
